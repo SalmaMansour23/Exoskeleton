@@ -1,0 +1,104 @@
+{
+  "algorithm": "XGBoost",
+  "training_sampling_rate": 500,
+  "epoch_window": [
+    0.0,
+    3.0
+  ],
+  "epoch_window_label": "Full Execution \u2014 0.0 to 3.0 s after PostureStart",
+  "baseline_window": [
+    -5.0,
+    -4.0
+  ],
+  "approach": "3-class: NoMovement / Flexing / Extending",
+  "n_features": 30,
+  "feature_names": [
+    "F3_mu",
+    "F3_beta",
+    "F3_lgamma",
+    "F4_mu",
+    "F4_beta",
+    "F4_lgamma",
+    "C3_mu",
+    "C3_beta",
+    "C3_lgamma",
+    "Cz_mu",
+    "Cz_beta",
+    "Cz_lgamma",
+    "C4_mu",
+    "C4_beta",
+    "C4_lgamma",
+    "P3_mu",
+    "P3_beta",
+    "P3_lgamma",
+    "P4_mu",
+    "P4_beta",
+    "P4_lgamma",
+    "lat_mu",
+    "lat_beta",
+    "ratio_mu",
+    "ratio_beta",
+    "std_C3",
+    "std_Cz",
+    "std_C4",
+    "ERD_dB",
+    "cycle_pos"
+  ],
+  "features_description": "28 freq + 1 ERD_dB + 1 cycle_pos_normalised",
+  "n_samples": 1268,
+  "n_participants": 17,
+  "classes": [
+    "Extending",
+    "Flexing",
+    "NoMovement"
+  ],
+  "label_map": {
+    "Flexing": "Flexing",
+    "Extending": "Extending",
+    "Flexed_Rest": "NoMovement",
+    "Extended_Rest": "NoMovement"
+  },
+  "xgb_params": {
+    "n_estimators": 300,
+    "max_depth": 6,
+    "learning_rate": 0.05,
+    "reg_alpha": 0.1,
+    "eval_metric": "mlogloss",
+    "random_state": 42,
+    "verbosity": 0
+  },
+  "cv_accuracy_mean": 0.8934790030727211,
+  "cv_accuracy_std": 0.014906112545573261,
+  "test_accuracy": 0.9251968503937008,
+  "training_date": "2026-05-25T00:49:48.911956",
+  "bandpass_hz": [
+    0.5,
+    50
+  ],
+  "notch_hz": 50,
+  "freq_bands": {
+    "mu": [
+      8,
+      13
+    ],
+    "beta": [
+      13,
+      30
+    ],
+    "low_gamma": [
+      30,
+      50
+    ]
+  },
+  "channel_order": [
+    "F3",
+    "F4",
+    "C3",
+    "Cz",
+    "C4",
+    "P3",
+    "P4"
+  ],
+  "ml_epoch_seconds": 3.0,
+  "erd_n_baseline_seconds": 1.0
+}
