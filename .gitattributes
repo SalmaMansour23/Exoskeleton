@@ -1,3 +1,0 @@
-realtimetest.zip filter=lfs diff=lfs merge=lfs -text
-files/project_file.zip filter=lfs diff=lfs merge=lfs -text
-Files/EMG_Model/EMG_Model.zip filter=lfs diff=lfs merge=lfs -text
